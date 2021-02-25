@@ -1,10 +1,20 @@
-<H1>Show</H1>
+<%= render 'shared/navbar' %>
+<br>
+<br>
+<br>
+<div class="bannershow" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://preview.redd.it/7lrno9mmmis21.jpg?width=960&crop=smart&auto=webp&s=c491dffe04b78c3978769acda98f087ae651b0fa);">
+  <div class="container">
+    <h1> <%= @cocktail.name %> good choice!</h1>
+    <p>If you drink, use moderation</p>
+  </div>
+</div>
 
-<%= @cocktail.name  %>
-<% @cocktail.doses.each do |dose| %>
-<%= dose.description %>
-<%= dose.ingredient.name %>
-<%= link_to 'Delete doses', dose, method: :delete  %>
-<% end %>
+<div class="container">
+  <% @cocktail.doses.each do |dose| %>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+  <%= link_to 'Delete doses', dose, method: :delete  %>
+  <% end %>
 
-<%= link_to "Add doses to your cocktail", new_cocktail_dose_path(@cocktail)  %>
+  <%= link_to "Add doses to your cocktail", new_cocktail_dose_path(@cocktail)  %>
+</div>
