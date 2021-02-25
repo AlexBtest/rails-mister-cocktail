@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # get 'cocktails/:id', to: 'cocktails#show', as: :cocktail
   # # Nested Routes for doses
 
+  root to: "cocktails#index"
+
   resources :cocktails, only: [:index, :new, :create, :show] do
     resources :doses, only: [:new, :create]
   end

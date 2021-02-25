@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Shadows+Into+Light&display=swap');
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: rgba(117, 190, 218, 0.0);
+
+  #vice_city {
+    font-family: 'Damion', cursive;
+    color: #FF1493;
+    transition: transform 0.2s ease-out;
+
+      &:hover {
+      transform: scale(1.1);
+      }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

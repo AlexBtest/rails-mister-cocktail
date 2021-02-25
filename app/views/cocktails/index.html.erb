@@ -1,7 +1,21 @@
-<H1>Index</H1>
+<%= render 'shared/navbar' %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://preview.redd.it/7lrno9mmmis21.jpg?width=960&crop=smart&auto=webp&s=c491dffe04b78c3978769acda98f087ae651b0fa);">
+  <div class="container">
+    <h1>Vice City Cocktails...</h1>
+    <p>Change your nights welcome to Vice city Cocktails.</p>
+  </div>
+</div>
 
- <% @cocktails.each do |cocktail| %>
- <%= link_to cocktail.name, cocktail_path(cocktail)  %>
- <% end %>
+<div class="container">
+   <div class="cards">
 
- <%= link_to 'add a cocktail', new_cocktail_path   %>
+    <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://blog.ubaldi.com/wp-content/uploads/2019/05/cocktails-blender.jpg)">
+      <%= link_to cocktail.name, cocktail_path(cocktail)  %>
+    </div>
+    <% end %>
+  </div>
+
+
+
+</div>
