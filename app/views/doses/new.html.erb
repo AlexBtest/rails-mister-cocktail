@@ -2,8 +2,6 @@
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
-  <%= f.input :ingredient, collection: @ingredients %>
+  <%= f.association :ingredient %>
   <%= f.button :submit %>
 <% end %>
-
-tableau des ingredients
