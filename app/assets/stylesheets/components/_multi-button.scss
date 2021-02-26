@@ -1,0 +1,30 @@
+
+.multi-button {
+  filter: drop-shadow(3px 10px 15px rgba(0, 0, 0, 0.45));
+  height: 50px;
+  width: 260px;
+  background: linear-gradient(to bottom, #bada55, #da55bb);
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  margin: -5px;
+  padding: 0;
+  stroke: black;
+  outline: none;
+  border-radius: 20px 20px 20px 20px;
+
+  &:hover {
+    cursor: pointer;
+    filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.45));
+  }
+
+  &:active {
+  filter: none;
+  transform: scale(.95);
+  }
+}
+
+
+
+

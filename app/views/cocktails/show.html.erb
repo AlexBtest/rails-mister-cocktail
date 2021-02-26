@@ -1,7 +1,4 @@
 <%= render 'shared/navbar' %>
-<br>
-<br>
-<br>
 <div class="bannershow" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://preview.redd.it/7lrno9mmmis21.jpg?width=960&crop=smart&auto=webp&s=c491dffe04b78c3978769acda98f087ae651b0fa);">
   <div class="container">
     <h1> <%= @cocktail.name %> good choice!</h1>
@@ -11,10 +8,32 @@
 
 <div class="container">
   <% @cocktail.doses.each do |dose| %>
-  <%= dose.description %>
-  <%= dose.ingredient.name %>
-  <%= link_to 'Delete doses', dose, method: :delete  %>
+  <div class="card bg-dark text-white">
+    <img class="card-img" src="https://blog.ubaldi.com/wp-content/uploads/2019/05/cocktails-blender.jpg" alt="Card image">
+    <div class="card-img-overlay">
+      <h5 class="card-title"><%= dose.cocktail.name %> good choice!</h5>
+      <p class="card-text"> <%= dose.description %> </p>
+      <p class="card-text"> <%= dose.ingredient.name %> </p>
+      <div>
+        <%= link_to 'Add doses to your cocktail', new_cocktail_dose_path(@cocktail), class: "multi-button" %>
+      </div>
+    </div>
+  </div>
   <% end %>
 
-  <%= link_to "Add doses to your cocktail", new_cocktail_dose_path(@cocktail)  %>
+<div class="card-container">
+  <div class="card u-clearfix">
+    <div class="card-body">
+      <span class="card-number card-circle subtle">01</span>
+      <span class="card-author subtle">John Smith</span>
+      <h2 class="card-title">New Brunch Recipe</h2>
+      <span class="card-description subtle">These last few weeks I have been working hard on a new brunch recipe for you all.</span>
+      <div class="card-read">Read</div>
+      <span class="card-tag card-circle subtle">C</span>
+    </div>
+    <img src="https://s15.postimg.cc/temvv7u4r/recipe.jpg" alt="" class="card-media" />
+  </div>
+  <div class="card-shadow"></div>
+</div>
+
 </div>
