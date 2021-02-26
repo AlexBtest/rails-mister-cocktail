@@ -1,17 +1,13 @@
 <%= render 'shared/navbar' %>
-<div class="bannershow" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://preview.redd.it/7lrno9mmmis21.jpg?width=960&crop=smart&auto=webp&s=c491dffe04b78c3978769acda98f087ae651b0fa);">
+<div class="banneradd" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://preview.redd.it/7lrno9mmmis21.jpg?width=960&crop=smart&auto=webp&s=c491dffe04b78c3978769acda98f087ae651b0fa);">
   <div class="container">
-    <h1> <%= @cocktail.name %> good choice!</h1>
-    <p>If you drink, use moderation</p>
-    <div class="link">
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <h1>Wich Vice would you look to add?</h1>
+    <h1>Wich Vice would you look to add?</h1>
+    <br>
+    <div class="simple">
     <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name, placeholder: 'Add your vice cocktail here' %>
     <%= f.submit 'Save your vice cocktail', class: "multi-button" %>
     <% end %>
+    </div>
+  </div>
 </div>

@@ -4,7 +4,7 @@
     <h1> <%= @cocktail.name %> good choice!</h1>
     <p>If you drink, use moderation</p>
     <div class="link">
-      <%= link_to 'Add doses', new_cocktail_dose_path(@cocktail), class: "multi-button" %>
+      <%= link_to "Add doses", new_cocktail_dose_path(@cocktail), class: "multi-button" %>
     </div>
   </div>
 </div>
@@ -17,7 +17,7 @@
       <% @cocktail.doses.each do |dose| %>
       <p class="card-text"> <%= dose.description %> of
                             <%= dose.ingredient.name %>
-                            <%= link_to "<i class='fas fa-trash' id='trash'></i>".html_safe, cocktail_doses_path(dose),
+                            <%= link_to "<i class='fas fa-trash' id='trash'></i>".html_safe, dose_path(dose),
                             method: :delete, data: { confirm: "Are you sure?" } %>
       </p>
       <% end %>
