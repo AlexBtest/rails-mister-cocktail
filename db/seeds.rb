@@ -16,6 +16,10 @@ Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 Ingredient.create(name: "strawberry")
 Ingredient.create(name: "greygoose")
+Ingredient.create(name: "tequila")
+Ingredient.create(name: "champagne")
+Ingredient.create(name: "apple juice")
+Ingredient.create(name: "sparkling water")
 Ingredient.create(name: "brown sugar")
 puts "Created"
 puts "Finished!"
