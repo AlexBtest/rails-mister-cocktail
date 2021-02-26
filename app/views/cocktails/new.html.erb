@@ -6,6 +6,7 @@
     <div class="simple">
     <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name, placeholder: 'Add your vice cocktail here' %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit 'Save your vice cocktail', class: "multi-button" %>
     <% end %>
     </div>

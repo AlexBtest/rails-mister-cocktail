@@ -11,7 +11,7 @@
 
 <div class="container">
   <div class="card-container">
-    <img class="card-img" src="https://blog.ubaldi.com/wp-content/uploads/2019/05/cocktails-blender.jpg" alt="Card image">
+    <div class="card-img"> <%= cl_image_tag @cocktail.photo.key, height: 550, width: 850, crop: :fill %> </div>
     <div class="card-img-overlay">
       <h5 class="card-title"><%= @cocktail.name %> recipe</h5>
       <% @cocktail.doses.each do |dose| %>
@@ -25,3 +25,4 @@
   </div>
 </div>
 
+<!-- <img class="card-img" src=" <%= cl_image_tag @cocktail.photo.key, height: 800, width: 580, crop: :fill %> " alt="Card image"> -->
