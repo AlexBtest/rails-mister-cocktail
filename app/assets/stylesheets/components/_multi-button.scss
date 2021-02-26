@@ -1,8 +1,8 @@
 
 .multi-button {
   filter: drop-shadow(3px 10px 15px rgba(0, 0, 0, 0.45));
-  height: 50px;
-  width: 260px;
+  height: 80px;
+  width: 120px;
   background: linear-gradient(to bottom, #bada55, #da55bb);
   font-weight: bold;
   color: white;
@@ -17,6 +17,8 @@
   &:hover {
     cursor: pointer;
     filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.45));
+    text-decoration: none;
+    color: black;
   }
 
   &:active {
